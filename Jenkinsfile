@@ -6,7 +6,7 @@ def name = 'sovrin'
 
 def buildDebUbuntu = { repoName, releaseVersion, sourcePath ->
     def volumeName = "sovrin-deb-u1604"
-    sh "docker volume rm -f $volumeName"
+    sh "docker volume rm $volumeName"
     dir('build-scripts/ubuntu-1604') {
         sh "./build-sovrin-docker.sh $sourcePath $releaseVersion"
     }
