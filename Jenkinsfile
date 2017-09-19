@@ -6,7 +6,7 @@ def name = 'sovrin'
 
 def buildDebUbuntu = { repoName, releaseVersion, sourcePath ->
     def volumeName = "sovrin-deb-u1604"
-    if (sh "docker volume ls -q | grep -q '^$volumeName$'") {
+    if (sh(script: "docker volume ls -q | grep -q '^$volumeName$'", returnStatus: true)) {
 	sh "docker volume rm $volumeName"
     }
     dir('build-scripts/ubuntu-1604') {
