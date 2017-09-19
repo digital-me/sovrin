@@ -17,5 +17,4 @@ def buildDebUbuntu = { repoName, releaseVersion, sourcePath ->
 
 options = new TestAndPublishOptions()
 options.enable([StagesEnum.PACK_RELEASE_DEPS, StagesEnum.PACK_RELEASE_ST_DEPS])
-options.skip([StagesEnum.PYPI_RELEASE, StagesEnum.GITHUB_RELEASE]) // Avoid to publish on PyPI and GitHub while working on CentOS
-testAndPublish(name, [ubuntu: [:]], true, options, [ubuntu: buildDebUbuntu])
+testAndPublish(name, [ubuntu: [:]], true, options, [ubuntu: buildDebUbuntu], true)
