@@ -10,7 +10,8 @@ RUN yum -y install \
         ruby-devel \
         rubygems \
         gcc \
-        make
+        make \
+	rpm-build
 
 # install fpm
 RUN gem install --no-ri --no-rdoc fpm
