@@ -1,14 +1,10 @@
-FROM ubuntu:16.04
+FROM centos:centos7.3.1611
 
-RUN apt-get update -y && apt-get install -y \
+RUN yum install -y \
     # common stuff
         git \
         wget \
         unzip \
-        python3.5 \
-        python3-pip \
-        python-setuptools \
-        python3-venv \
     # fmp
         ruby \
         ruby-dev \

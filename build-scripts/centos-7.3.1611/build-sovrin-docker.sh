@@ -3,8 +3,8 @@
 PKG_SOURCE_PATH=$1
 VERSION=$2
 PKG_NAME=sovrin
-OUTPUT_VOLUME_NAME=${PKG_NAME}-deb-u1604
-IMAGE_NAME=${PKG_NAME}-build-u1604
+OUTPUT_VOLUME_NAME=${PKG_NAME}-rpm-c7.3.1611
+IMAGE_NAME=${PKG_NAME}-build-c7.3.1611
 
 if [[ (-z ${PKG_SOURCE_PATH}) || (-z ${VERSION}) ]]; then
     echo "Usage: $0 <path-to-package-sources> <version>"

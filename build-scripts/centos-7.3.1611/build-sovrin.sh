@@ -11,15 +11,14 @@ TMP_DIR=$(mktemp -d)
 cp -r ${INPUT_PATH}/. ${TMP_DIR}
 
 # prepare the sources
-cd ${TMP_DIR}/build-scripts/ubuntu-1604
+cd ${TMP_DIR}/build-scripts/centos-7.3.1611
 ./prepare-package.sh ${TMP_DIR} ${VERSION}
 
 fpm --input-type "python" \
-    --output-type "deb" \
-    --architecture "amd64" \
+    --output-type "rpm" \
     --verbose \
-    --python-package-name-prefix "python3" \
-    --python-bin "/usr/bin/python3" \
+    --python-package-name-prefix "python35u" \
+    --python-bin "/usr/bin/python3.5" \
     --exclude "*.pyc" \
     --exclude "*.pyo" \
     --maintainer "Sovrin Foundation <repo@sovrin.org>" \

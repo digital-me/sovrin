@@ -3,7 +3,7 @@
 ```
 ./build-sovrin-docker.sh <path-to-sources> <version>
 ```
-Built package is placed in a docker volume `sovrin-deb-u1604`. 
+Built package is placed in a docker volume `sovrin-rpm-c7.3.1611`. 
 
 ### Build a sovrin package
 
