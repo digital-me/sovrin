@@ -11,7 +11,7 @@ def buildDebUbuntu = { repoName, releaseVersion, sourcePath ->
 	sh "docker volume rm $volumeName"
     }
     dir('build-scripts/ubuntu-1604') {
-        sh "./build-sovrin-docker.sh \"$sourcePath\" \"$releaseVersion\""
+        sh "./build-sovrin-docker.sh \"$sourcePath\" \"$releaseVersion\" \"$volumeName\""
     }
     return "$volumeName"
 }
@@ -23,7 +23,7 @@ def buildRpmCentos = { repoName, releaseVersion, sourcePath ->
 	sh "docker volume rm $volumeName"
     }
     dir('build-scripts/centos-7.3.1611') {
-        sh "./build-sovrin-docker.sh \"$sourcePath\" \"$releaseVersion\""
+        sh "./build-sovrin-docker.sh \"$sourcePath\" \"$releaseVersion\" \"$volumeName\""
     }
     return "$volumeName"
 }
