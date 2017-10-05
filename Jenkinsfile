@@ -17,4 +17,4 @@ def buildDebUbuntu = { repoName, releaseVersion, sourcePath ->
 
 options = new TestAndPublishOptions()
 options.enable([StagesEnum.PACK_RELEASE_DEPS, StagesEnum.PACK_RELEASE_ST_DEPS])
-testAndPublish(name, [ubuntu: [:]], true, options, [ubuntu: buildDebUbuntu], true)
+testAndPublish(name, [ubuntu: [:]], true, options, [ubuntu: buildDebUbuntu])
